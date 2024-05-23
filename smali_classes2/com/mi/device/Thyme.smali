@@ -372,14 +372,6 @@
     return p0
 .end method
 
-.method public o00O0o()Z
-    .locals 0
-
-    const/4 p0, 0x1
-
-    return p0
-.end method
-
 .method public o00O0o0O()Z
     .locals 0
 
