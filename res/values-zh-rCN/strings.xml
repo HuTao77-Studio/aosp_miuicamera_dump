@@ -1135,7 +1135,7 @@
     <string name="module_name_pixel_48m">48MP</string>
     <string name="module_name_pixel_50m">50MP</string>
     <string name="module_name_pixel_64m">64MP</string>
-    <string name="module_name_pixel_xxxm">50MP</string>
+    <string name="module_name_pixel_xxxm">108MP</string>
     <string name="module_name_portrait">人像</string>
     <string name="module_name_professional">专业</string>
     <string name="module_name_scanner">扫一扫</string>
@@ -2008,7 +2008,7 @@
     <string name="ultra_pixel_photography_close_tip">%s超清已关闭</string>
     <string name="ultra_pixel_photography_open_tip">%s超清</string>
     <string name="ultra_pixel_portrait_hint">弱光人像</string>
-    <string name="ultra_pixel_xxxmp">5000万</string>
+    <string name="ultra_pixel_xxxmp">1亿</string>
     <string name="ultra_pixel_zoom_no_support_tip">%s超清模式下不支持变焦</string>
     <string name="ultra_tele_use_hint_text_body">"50X超长变焦，为您实现出色的远摄能力
 记录距离更远的精彩时刻"</string>
