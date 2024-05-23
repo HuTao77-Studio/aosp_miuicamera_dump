@@ -380,7 +380,36 @@
 .method private onItemSelected(IZ)V
     .locals 4
 
+    invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/android/camera/CameraSettings;->getCameraId()I
+
+    move-result v1
+
+    invoke-virtual {v0, v1}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getCapabilities(I)Lcom/android/camera2/CameraCapabilities;
+
+    move-result-object v0
+
+    invoke-static {}, LOooO0O0/OooO0Oo/OooO00o/OooO00o;->o0OOOOO0()LOooO0O0/OooO0Oo/OooO00o/OooO00o;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, LOooO0O0/OooO0Oo/OooO00o/OooO00o;->o00OO0oO()Z
+
+    move-result v1
+
+    invoke-static {v0}, Lcom/android/camera2/CameraCapabilitiesUtil;->isLightingVersion2(Lcom/android/camera2/CameraCapabilities;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    add-int/lit8 p1, p1, -0x1
+
     .line 1
+    :cond_0
     sget-object v0, Lcom/android/camera/fragment/lighting/FragmentLighting;->TAG:Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -434,12 +463,12 @@
 
     move-result-object p2
 
-    if-nez p2, :cond_0
+    if-nez p2, :cond_1
 
     return-void
 
     .line 5
-    :cond_0
+    :cond_1
     iget-object v0, p0, Lcom/android/camera/fragment/lighting/FragmentLighting;->mComponentRunningLighting:Lcom/android/camera/data/data/runing/ComponentRunningLighting;
 
     iget v1, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
@@ -468,20 +497,20 @@
 
     move-result v2
 
-    if-eqz v2, :cond_2
+    if-eqz v2, :cond_3
 
     .line 8
     invoke-static {}, Lcom/android/camera/Util;->isAccessible()Z
 
     move-result p2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
     invoke-virtual {p0}, Landroidx/fragment/app/Fragment;->isAdded()Z
 
     move-result p2
 
-    if-eqz p2, :cond_1
+    if-eqz p2, :cond_2
 
     .line 9
     iget-object p0, p0, Lcom/android/camera/fragment/lighting/FragmentLighting;->mRecyclerView:Landroidx/recyclerview/widget/RecyclerView;
@@ -490,7 +519,7 @@
 
     move-result-object p0
 
-    if-eqz p0, :cond_1
+    if-eqz p0, :cond_2
 
     .line 10
     iget-object p0, p0, Landroidx/recyclerview/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -499,11 +528,11 @@
 
     invoke-virtual {p0, p1}, Landroid/view/View;->sendAccessibilityEvent(I)V
 
-    :cond_1
+    :cond_2
     return-void
 
     .line 11
-    :cond_2
+    :cond_3
     invoke-static {}, Lcom/android/camera/module/loader/camera2/Camera2DataContainer;->getInstance()Lcom/android/camera/module/loader/camera2/Camera2DataContainer;
 
     move-result-object v2
@@ -516,7 +545,7 @@
 
     move-result v2
 
-    if-eqz v2, :cond_3
+    if-eqz v2, :cond_4
 
     .line 12
     sget v2, Lcom/android/camera/effect/FilterInfo;->FILTER_ID_NONE:I
@@ -524,7 +553,7 @@
     invoke-interface {p2, v2}, Lcom/android/camera/protocol/protocols/ConfigChanges;->setFilter(I)V
 
     .line 13
-    :cond_3
+    :cond_4
     iget-object v2, p0, Lcom/android/camera/fragment/lighting/FragmentLighting;->mComponentRunningLighting:Lcom/android/camera/data/data/runing/ComponentRunningLighting;
 
     iget v3, p0, Lcom/android/camera/fragment/BaseFragment;->mCurrentMode:I
