@@ -228,7 +228,7 @@
         <meta-data android:name="com.miui.bugreport.DEFAULT_LOG_DIR" android:resource="@xml/default_log_paths"/>
         <meta-data android:name="aia-compat-api-min-version" android:value="1"/>
         <meta-data android:name="miuiWidgetVersion" android:value="1"/>
-        <receiver android:label="@string/widget_camera_label" android:name="com.android.camera2.compat.theme.custom.cv.widget.CameraFiltersWidgetProvider" android:process=":widgetProvider">
+        <receiver android:enabled="false" android:label="@string/widget_camera_label" android:name="com.android.camera2.compat.theme.custom.cv.widget.CameraFiltersWidgetProvider" android:process=":widgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
@@ -236,7 +236,7 @@
             <meta-data android:name="miuiWidgetTransitionAnimation" android:value="true"/>
             <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_camera_filter_info"/>
         </receiver>
-        <receiver android:label="@string/cv_lens_title" android:name="com.android.camera2.compat.theme.custom.cv.widget.CameraLensWidgetProvider" android:process=":widgetProvider">
+        <receiver android:enabled="false" android:label="@string/cv_lens_title" android:name="com.android.camera2.compat.theme.custom.cv.widget.CameraLensWidgetProvider" android:process=":widgetProvider">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
             </intent-filter>
